@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SCANNER TEST"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6dp"
+        android:text="Scan any barcode / QR code. Nothing is saved or sent from this page."
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/testField"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FFFFFF"
+        android:hint="test field - scan here"
+        android:padding="6dp" />
+
+    <TextView android:id="@+id/tvFocusState" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingTop="8dp"
+        android:textSize="16sp" android:textStyle="bold" />
+
+    <TextView android:id="@+id/tvEnter" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingTop="8dp"
+        android:text="ENTER: waiting for a scan..." android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView android:id="@+id/tvReceived" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingTop="8dp"
+        android:text="Received text: -" android:textSize="18sp"
+        android:typeface="monospace" />
+
+    <TextView android:id="@+id/tvCount" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingTop="4dp"
+        android:text="Character count: -" android:textSize="16sp" />
+
+    <TextView android:id="@+id/tvStamp" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingTop="4dp"
+        android:text="Last scan: -" android:textSize="16sp" />
+
+    <TextView android:id="@+id/tvLive" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingTop="4dp"
+        android:text="Live buffer: -" android:textSize="14sp"
+        android:typeface="monospace" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Raw events (newest first):"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="false">
+
+        <TextView android:id="@+id/tvRaw" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textSize="12sp"
+            android:typeface="monospace" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button android:id="@+id/btnTestClear" android:layout_width="0dp"
+            android:layout_height="48dp" android:layout_weight="1"
+            android:focusable="false" android:focusableInTouchMode="false"
+            android:text="Clear" />
+
+        <Button android:id="@+id/btnTestBack" android:layout_width="0dp"
+            android:layout_height="48dp" android:layout_weight="1"
+            android:focusable="false" android:focusableInTouchMode="false"
+            android:text="Back" />
+    </LinearLayout>
+</LinearLayout>

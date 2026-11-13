@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="SETTINGS" android:textSize="26sp" android:textStyle="bold" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="10dp" android:text="Google Apps Script web app URL (ends with /exec)" />
+        <EditText android:id="@+id/etUrl" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:inputType="textUri"
+            android:textSize="13sp" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="10dp" android:text="Secret key (same as SECRET_KEY in Code.gs)" />
+        <EditText android:id="@+id/etKey" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:inputType="text" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="Scan timeout in ms (discard half-received scans without ENTER; 0 = off)" />
+        <EditText android:id="@+id/etTimeout" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:inputType="number" />
+
+        <CheckBox android:id="@+id/cbBeep" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Beep on scan result" />
+        <CheckBox android:id="@+id/cbVibrate" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Vibrate on scan result" />
+        <CheckBox android:id="@+id/cbAwake" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Keep screen on while scanning" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="14dp" android:textStyle="bold"
+            android:text="Optional: broadcast-intent scanner (only if keyboard mode does not work)" />
+        <CheckBox android:id="@+id/cbBroadcast" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Enable broadcast scanner input" />
+        <EditText android:id="@+id/etBcAction" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Intent action" android:inputType="text"
+            android:textSize="13sp" />
+        <EditText android:id="@+id/etBcExtra" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Extra name holding the barcode"
+            android:inputType="text" android:textSize="13sp" />
+
+        <Button android:id="@+id/btnSave" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="14dp"
+            android:text="Save" />
+        <Button android:id="@+id/btnPing" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Test Google Sheets connection" />
+        <TextView android:id="@+id/tvPing" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:padding="6dp" />
+        <Button android:id="@+id/btnRetry" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Upload pending scans now" />
+        <Button android:id="@+id/btnScannerTest" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Scanner Test" />
+        <Button android:id="@+id/btnBack" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Back" />
+    </LinearLayout>
+</ScrollView>
